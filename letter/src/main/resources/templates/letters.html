@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我的信箱</title>
+</head>
+<body>
+    <h1>我的信箱</h1>
+    <a href="/">写一封信</a>
+
+    <p th:if="${#lists.isEmpty(letters)}">还没有保存的信件。</p>
+
+    <article th:each="letter : ${letters}">
+        <hr>
+        <h2 th:text="|第 ${letter['id']} 封信|">信件编号</h2>
+        <p th:text="${letter['created_at']}">创建时间</p>
+        <p th:text="${letter['content']}"
+           style="white-space: pre-wrap; overflow-wrap: anywhere;">
+            信件正文
+        </p>
+    </article>
+</body>
+</html>

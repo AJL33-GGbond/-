@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>时间不是忘记，而是放下</title>
+</head>
+<body>
+    <h1>时间不是忘记，而是放下</h1>
+    <p>在这里，写下那些还没说完的话。</p>
+
+    <form action="/letters" method="post">
+        <label for="content">信的正文</label>
+        <br>
+        <textarea
+            id="content"
+            name="content"
+            rows="12"
+            cols="40"
+            placeholder="今天，我想对你说……"
+            required
+        ></textarea>
+        <br>
+        <button type="submit">保存草稿</button>
+    </form>
+    <p><a href="/letters">查看我的信箱</a></p>
+</body>
+</html>

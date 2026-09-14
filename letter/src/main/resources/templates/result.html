@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>提交结果</title>
+</head>
+<body>
+    <h1 th:text="${message}">提交结果</h1>
+
+    <p th:text="${content}" style="white-space: pre-wrap;"></p>
+
+    <a href="/">返回写信</a>
+    <p><a href="/letters">查看我的信箱</a></p>
+</body>
+</html>
