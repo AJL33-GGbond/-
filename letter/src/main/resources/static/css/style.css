@@ -1,0 +1,211 @@
+:root {
+  --bg:#f2eee7;
+  --paper:#fffdf8;
+  --ink:#3e3933;
+  --muted:#82786e;
+  --line:#e5ddd0;
+  --accent:#80614d}
+
+* {
+  box-sizing:border-box}
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:15px;
+  line-height:1.8}
+a {
+  color:var(--accent);
+  text-decoration:none;
+  transition:color .15s}
+a:hover {
+  color:#493424;
+  text-decoration:underline}
+a:focus-visible,button:focus-visible {
+  outline:3px solid #b38c65;
+  outline-offset:5px}
+.site-header {
+  max-width:1120px;
+  margin:auto;
+  padding:27px 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--line)}
+.brand {
+  display:flex;
+  gap:13px;
+  align-items:center;
+  color:var(--ink);
+  font-family:"Songti SC",SimSun,serif;
+  font-size:19px;
+  letter-spacing:2px}
+.brand-mark {
+  width:34px;
+  height:26px;
+  border:1px solid #ac9781;
+  display:inline-grid;
+  place-items:center;
+  color:#ac9781;
+  font-size:20px}
+.site-header nav {
+  display:flex;
+  gap:30px;
+  font-size:14px}
+.site-header nav a[aria-current=page] {
+  color:var(--ink);
+  border-bottom:1px solid var(--accent)}
+.workspace {
+  max-width:940px;
+  margin:58px auto 70px;
+  padding:0 28px}
+.eyebrow {
+  font-size:11px;
+  letter-spacing:3px;
+  color:var(--muted);
+  margin:0 0 14px}
+h1,h2 {
+  font-family:"Songti SC","STSong",SimSun,serif;
+  font-weight:500}
+h1 {
+  font-size:34px;
+  letter-spacing:3px;
+  line-height:1.5;
+  margin:0 0 15px}
+h2 {
+  font-size:23px;
+  margin:10px 0 20px}
+p {
+  margin:12px 0}
+.workspace>p {
+  color:var(--muted)}
+.paper {
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:44px 52px;
+  box-shadow:0 10px 30px #56422a06;
+  margin-top:30px;
+  border-radius:3px}
+.paper>h1 {
+  font-size:28px}
+.paper>p:first-of-type {
+  color:var(--muted)}
+form {
+  margin-top:24px}
+label {
+  font-size:13px;
+  color:var(--muted);
+  letter-spacing:2px}
+textarea {
+  display:block;
+  margin:18px 0 24px;
+  width:100%;
+  min-height:350px;
+  padding:17px 20px;
+  border:1px solid var(--line);
+  border-radius:2px;
+  background:#fffefb;
+  color:var(--ink);
+  font:17px/2.1 "Songti SC",SimSun,serif;
+  resize:vertical;
+  transition:border-color .2s}
+textarea:focus {
+  outline:2px solid #b89b7833;
+  border-color:#a88b6e}
+textarea::placeholder {
+  color:#b3a99c}
+button,.button {
+  display:inline-block;
+  border:1px solid var(--accent);
+  border-radius:3px;
+  background:var(--accent);
+  color:#fffdf7;
+  font:inherit;
+  font-size:14px;
+  letter-spacing:1px;
+  padding:11px 25px;
+  cursor:pointer;
+  transition:background .15s}
+button:hover,.button:hover {
+  background:#654935;
+  color:white;
+  text-decoration:none}
+form br {
+  display:none}
+.site-footer {
+  max-width:1064px;
+  border-top:1px solid var(--line);
+  margin:0 auto;
+  padding:24px 0 36px;
+  color:#9c9184;
+  font-family:"Songti SC",SimSun,serif;
+  font-size:13px;
+  letter-spacing:2px;
+  display:flex;
+  justify-content:space-between}
+.site-footer span:last-child {
+  font-family:inherit;
+  font-size:12px;
+  letter-spacing:1px}
+article {
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:3px;
+  padding:30px 38px;
+  margin:22px 0;
+  box-shadow:0 7px 22px #56422a04}
+article hr {
+  display:none}
+article>p {
+  font-size:13px;
+  color:var(--muted)}
+article>p:last-child {
+  font:17px/2.1 "Songti SC",SimSun,serif;
+  color:var(--ink);
+  border-top:1px solid var(--line);
+  padding-top:25px;
+  margin-top:24px}
+article>a:first-child {
+  float:right;
+  font-size:13px;
+  padding:5px 0}
+.status {
+  display:inline-block;
+  border:1px solid #dfd3c1;
+  background:#f5eee2;
+  padding:1px 10px;
+  border-radius:20px;
+  font-size:12px;
+  color:#826849}
+.status.sent {
+  background:#edf0e8;
+  border-color:#d9dfce;
+  color:#697653}
+.letter-body {
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  font:18px/2.2 "Songti SC",SimSun,serif;
+  padding:24px 0;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  margin:26px 0}
+[role=alert] {
+  padding:12px 16px;
+  background:#f8ede6;
+  border-left:3px solid #a16b50;
+  color:#80513e}
+.empty {
+  padding:45px;
+  text-align:center;
+  border:1px dashed #d4c7b5;
+  background:#fbf8f1}
+.detail article {
+  padding:38px 48px}
+.detail article>p:first-child,.detail article>p:nth-child(2) {
+  display:inline-block;
+  margin-right:20px}
+.paper>p>a {
+  font-size:13px}
+::selection {
+  background:#e9dcc8}

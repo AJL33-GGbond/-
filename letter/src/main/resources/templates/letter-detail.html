@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>我的信箱</title>
+    <title>信件详情</title>
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<header class="site-header"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">✉</span>时间不是忘记，而是放下</a><nav aria-label="主导航"><a href="/">写一封信</a><a href="/letters" aria-current="page">我的信箱</a></nav></header>
-<main class="workspace "><p class="eyebrow">LETTERS · 留给心里的话</p>
-    <h1>我的信箱</h1>
+<header class="site-header"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">✉</span>时间不是忘记，而是放下</a><nav aria-label="主导航"><a href="/">写一封信</a><a href="/letters">我的信箱</a></nav></header>
+<main class="workspace detail"><p class="eyebrow">LETTERS · 留给心里的话</p>
+    <h1>信件详情</h1>
+    <a href="/letters">返回信箱</a>
     <p>时间均为马来西亚时间（UTC+8）。</p>
     <a href="/">写一封信</a>
 
-    <p class="empty" th:if="${#lists.isEmpty(letters)}">还没有保存的信件。</p>
 
-    <article th:each="letter : ${letters}">
+
+    <article>
         <hr>
-        <a th:href="@{/letters/{id}(id=${letter.id})}">查看详情</a>
+
+        <p th:if="${letter.status == 'DRAFT'}"><a th:href="@{/letters/{id}/edit(id=${letter.id})}">修改草稿</a></p>
+        <p th:if="${letter.status == 'DRAFT'}"><a th:href="@{/letters/{id}/confirm(id=${letter.id})}">准备寄出</a></p>
+        <p th:if="${letter.status == 'SENT'}">这封信已寄出，正文已锁定。</p>
         <h2 th:text="|信件编号 #${letter.id}|">信件编号</h2>
         <p th:switch="${letter.status}">状态：
             <span class="status" th:case="'DRAFT'">草稿</span>
